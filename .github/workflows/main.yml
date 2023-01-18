@@ -21,6 +21,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Login to Huggingface
-        run: python -c "import huggingface_hub; huggingface_hub.login(${{secrets.HF_TOKEN}}, add_to_git_credential=True)"
+        run: python -c "import huggingface_hub; huggingface_hub.login('${{secrets.HF_TOKEN}}', add_to_git_credential=True)"
       - name: Run Python
         run: python main.py
