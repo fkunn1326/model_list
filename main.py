@@ -33,5 +33,5 @@ for model in models:
                                         "file_list": [file.rfilename]
                                     })
 
-with open(r"data.json", 'w', encoding="utf8") as f:
+with open(r"./public/data.json", 'w', encoding="utf8") as f:
     json.dump(ml, f, indent=4, ensure_ascii=False)
