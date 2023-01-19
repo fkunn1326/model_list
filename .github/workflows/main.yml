@@ -22,8 +22,10 @@ jobs:
         run: python -c "import huggingface_hub; huggingface_hub.login('${{secrets.HF_TOKEN}}')"
       - name: Create Directory
         run: mkdir public
+      - name: Copy HTML
+        run: cp ./index.html ./public/index.html
       - name: Run Python
-        run: python main.py
+        run: python ./main.py
       - uses: actions/upload-pages-artifact@v1
         with:
           path: public
