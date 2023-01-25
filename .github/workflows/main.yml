@@ -24,7 +24,9 @@ jobs:
       - name: Create Directory
         run: mkdir public
       - name: Copy HTML
-        run: cp ./index.html ./public/index.html
+        run: |
+          cp ./index.html ./public/index.html
+          cp ./diffusers.html ./public/diffusers.html
       - name: Run Python
         run: python ./main.py
       - name: Run Python[diffusers]
