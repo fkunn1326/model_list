@@ -27,6 +27,8 @@ jobs:
         run: cp ./index.html ./public/index.html
       - name: Run Python
         run: python ./main.py
+      - name: Run Python[diffusers]
+        run: python ./diffusers.py
       - uses: actions/upload-pages-artifact@v1
         with:
           path: public
